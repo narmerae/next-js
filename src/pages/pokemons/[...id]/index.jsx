@@ -22,13 +22,13 @@ export async function getServerSideProps(context) {
 const Index = ({data}) => {
     console.log(data)
     return (
-        <div className={inter.className}>
+        <div className={inter.className} id={"main"}>
             <Head>
                 <title>{data.name}</title>
                 <meta name="description" content={`This is ${data.name}`} />
             </Head>
             <h1>{data.name}</h1>
-            <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} width={500} height={281}  alt={data.name}></Image>
+            <Image style={{padding:`5px`}} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} width={500} height={281}  alt={data.name}></Image>
             <Link href={`/pokemons`}>Pokemons</Link>
 
         </div>

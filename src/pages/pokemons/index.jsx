@@ -15,8 +15,9 @@ const Index = ({data}) => {
     const arrayPokemons = data.results;
     console.log(arrayPokemons)
     return (
-        <div className={inter.className}>
-            <h1>List of Pokemons</h1>
+        <>
+            <h1 className={inter.className} style={{textAlign:"center"}}>List of Pokemons</h1>
+            <div className={inter.className} id={"main"}>
             {
                 arrayPokemons.map((pokemon, index) => (
                     <div key={index}>
@@ -24,7 +25,8 @@ const Index = ({data}) => {
                     </div>
                 ))
             }
-        </div>
+            </div>
+        </>
     );
 };
 
